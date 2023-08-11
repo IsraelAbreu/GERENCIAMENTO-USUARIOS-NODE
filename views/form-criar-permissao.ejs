@@ -1,0 +1,29 @@
+<%- include('head') %>
+<%- include('navbar') %>
+
+    <body>
+        <div class="container">
+            <div class="card mt-5">
+                <div class="card-header">
+                    <h2 class="text-center mt-2">Criar Permissão de acesso</h2>
+                </div>
+                <div class="card-body">
+                    <form action="salvar-permissao" method="POST">
+                        <div class="mb-3">
+                            <label for="exampleInputnomel1" class="form-label">Descricao</label>
+                            <input type="text" class="form-control" id="exampleInputnome1" name="descricao" required>
+                        </div>
+                        <button type="submit" class="btn btn-lg btn-primary">Criar permissão</button>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous">
+        </script>
+    </body>
+
+</html>
