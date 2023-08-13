@@ -1,30 +1,21 @@
 <table class="table">
     <thead>
         <tr>
-            <th scope="col"># Código</th>
+            <th scope="col" class="text-center">#Código</th>
             <th scope="col">Nome</th>
             <th scope="col">Email</th>
-            <th scope="col">Permissão</th>
+            <th scope="col" class="text-center">Permissão</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-        </tr>
+        <% usuarios.forEach(usuario => { %>
+            <tr>
+                <th scope="row" class="text-center"><%- usuario.id %></th>
+                <td><%- usuario.nome %></td>
+                <td><%- usuario.email %></td>
+                <td class="text-center"><%- usuario.id_permissao %></td>
+            </tr>
+        <% }) %>      
     </tbody>
 </table>
 
