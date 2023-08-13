@@ -1,4 +1,4 @@
-const express  = require('express');
+const express = require('express');
 const app = express();
 
 var bodyParser = require("body-parser");
@@ -8,10 +8,9 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json()); 
+app.use(bodyParser.json());
 
 //rotas
-
 app.get('/', (req, res) => {
     res.render('principal');
 });
@@ -29,7 +28,7 @@ app.post('/salvar-usuario', (req, res) => {
 })
 
 app.get("/criar-permissao", (req, res) => {
-  res.render("form-criar-permissao");
+    res.render("form-criar-permissao");
 });
 
 app.post('/salvar-permissao', (req, res) => {
